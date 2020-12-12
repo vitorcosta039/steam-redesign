@@ -1,0 +1,242 @@
+$color-one: #0B121C;
+$color-two: #1B2939;
+$color-three: #2BB2BF;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif !important;
+  text-decoration: none;
+}
+
+body {
+  background: #05080d;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+/* START Menu Itens */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 16px 20px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  transition: all .25s ease-in-out;
+}
+
+header nav ul li a:hover { background: rgba(255, 255, 255, .09); }
+/* END Menu Itens */
+
+
+.cart-profile {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+/* START cart */
+header .cart { 
+  position: relative;
+}
+
+header .cart a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  line-height: 0;
+  padding: 10px 15px 10px 5px;
+  transition: all .3s ease-in-out;
+}
+
+header .cart a:hover { background: rgba(255, 255, 255, .09); }
+
+header .cart .notification-cart {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-weight: bold;
+  border-radius: 100%;
+  background: #F35E38;
+  font-size: 0.6875em;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+/* END Cart */
+
+.container {
+  width: 1242px;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* START Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: all .25s ease-in-out;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.profile:hover { background: rgba(255, 255, 255, .09); }
+
+.profile .photo-user{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: green;
+  object-fit: cover;
+  background-size: 100%;
+  background-image: url('../img/profile.jpeg');
+}
+
+.profile .name-drop {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+/* END Profile */
+
+/* START main home */
+.main-home {
+  margin-top: -62px;
+}
+
+.main-home .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 80px;
+}
+
+.main-home .filters {
+  width: 20%;
+}
+
+.main-home .games {
+  width: 80%;
+  background: red;  
+}
+/* END main home */
+
+.main-home .filters button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  background: #1B2939;
+  outline: none;
+  margin-bottom: 2px;
+  letter-spacing: 0.05em;
+  transform: translateY(60px);
+  transition: all 1s;
+  opacity: 0;
+}
+
+.main-home .filters button.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.main-home .filters button:nth-child(1){
+  transition-delay: .1s;
+}
+
+.main-home .filters button:nth-child(3) {
+  transition-delay: .2s;
+}
+
+.main-home .filters button:nth-child(5) {
+  transition-delay: .3s;
+}
+
+.main-home .filters button:nth-child(7) {
+  transition-delay: .4s;
+}
+
+.main-home .filters a {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #2BB2BF;
+  font-size: 14px;
+}
+
+.main-home .filters a:hover {
+  text-decoration: underline;
+}
+
+.accordion svg {
+  transition: all .3s ease-in-out;
+}
+
+.accordion.is-open svg{
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  padding: 0px 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes opacityAnim {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
